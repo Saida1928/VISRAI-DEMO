@@ -1958,3 +1958,17 @@ document.addEventListener("keydown", e => {
     e.preventDefault();
   }
 });
+<script>
+/* ━━ BASIC SOURCE PROTECTION (DETERRENT) ━━ */
+document.addEventListener("contextmenu", e => e.preventDefault());
+
+document.addEventListener("keydown", e => {
+  if (
+    e.key === "F12" ||
+    (e.ctrlKey && e.shiftKey && ["I","C","J"].includes(e.key)) ||
+    (e.ctrlKey && e.key === "U")
+  ) {
+    e.preventDefault();
+  }
+});
+</script>
